@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Submission</h1>
+	<form action="/my-handling-form-page" method="post">
+		<ul>
+			<li>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="user_name">
+			</li>
+			<li>
+				<label for="mail">E-mail:</label>
+				<input type="email" id="mail" name="user_email" value="abc@xyz.com">
+			</li>
+			<li>
+				<label for="message">Message:</label>
+				<textarea id="message" name="user_message">Write a message</textarea>
+			</li>
+			<li>
+				<fieldset>
+					<legend>Priority</legend>
+					<p>
+						<input type="radio" name="size" id="size1" value="Small">
+						<label for="size1">Small</label>
+					</p>
+					<p>
+						<input type="radio" name="size" id="size2" value="Medium">
+						<label for="size2">Medium</label>
+					</p>
+					<p>
+						<input type="radio" name="size" id="size3" value="Large">
+						<label for="size3">Large</label>
+					</p>
+				</fieldset>
+			</li>
+			<li>
+				<fieldset>
+					<legend>Order?</legend>
+					<p>
+					<input type="checkbox" id="orderw" name="yes" value="Yes">
+					<label for="yes">Yes</label>
+					</p>
+					<p>
+						<input type="checkbox" id="orderw" name="No" value="No">
+						<label for="yes" style="text-align: left;">No</label>
+					</p>
+				</fieldset>
+			</li>
+			<li>
+				<button type="submit">Submit</button><button type="reset">Reset</button>
+			</li>
+		</ul>
+	</form>
+</body>
+</html>
