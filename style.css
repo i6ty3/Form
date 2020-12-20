@@ -23,7 +23,7 @@ form li + li {
 label{
 	display: inline-block;
 	width: 70px;
-	text-align: right;
+	text-align: left;
 }
 input, textarea{
 	font: 1em sans-serif;
@@ -49,7 +49,4 @@ legend{
 }
 input#size1,#size2,#size3,#orderw{
 	width: 20px;
-}
-label{
-	text-align: left;
 }

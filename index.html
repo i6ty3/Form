@@ -5,6 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+	<script type="text/javascript" src="java.js"></script>
 	<h1>Submission</h1>
 	<form action="/my-handling-form-page" method="post">
 		<ul>
@@ -49,6 +50,45 @@
 						<label for="yes" style="text-align: left;">No</label>
 					</p>
 				</fieldset>
+			</li>
+			<li>
+				<label for="size">Size</label>
+				<select id="size" name="size">
+					<optgroup label="Big">
+						<option value="XL">Extra Large</option>
+						<option value="L">Large</option>
+					</optgroup>
+					<optgroup label="Medium">
+						<option value="ML">Medium Large</option>
+						<option value="M">Medium Short</option>
+					</optgroup>
+					<option value="small">Small</option>
+				</select>
+			</li>
+			<li>
+				<label for="word">Word</label>
+				<input list="word">
+				<datalist id="word">
+					<option value="a">
+					<option value="quick">
+					<option value="brown">
+					<option value="fox">
+					<option value="jumps">
+					<option value="over">
+					<option value="the">
+					<option value="lazy">
+					<option value="dog">
+				</datalist>
+			</li>
+			<li>
+				price <br>
+				0<input type="range"  id="a" name="a" value="50">100
+			</li>
+			<li>
+				<p id="xyz"></p>
+			</li>
+			<li>
+				<button type="button" onclick="alert('recheck')">click</button>
 			</li>
 			<li>
 				<button type="submit">Submit</button><button type="reset">Reset</button>
