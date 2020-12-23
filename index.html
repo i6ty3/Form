@@ -5,7 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<script type="text/javascript" src="java.js"></script>
 	<a href="dat/index.html">Click</a>
 	<h1>Submission</h1>
 	<form action="/my-handling-form-page" method="post">
@@ -14,7 +13,7 @@
 				<label for="name">Name:</label>
 				<input type="text" id="name" name="user_name">
 			</li>
-			<li>
+<!-- 			<li>
 				<label for="mail">E-mail:</label>
 				<input type="email" id="mail" name="user_email" value="abc@xyz.com">
 			</li>
@@ -48,7 +47,7 @@
 					</p>
 					<p>
 						<input type="checkbox" id="orderw" name="No" value="No">
-						<label for="yes" style="text-align: left;">No</label>
+						<label for="no" style="text-align: left;">No</label>
 					</p>
 				</fieldset>
 			</li>
@@ -86,15 +85,17 @@
 				0<input type="range"  id="a" name="a" value="50">100
 			</li>
 			<li>
-				<p id="xyz"></p>
+				<p id="xyz">as</p>
 			</li>
-			<li>
+ -->			<li>
 				<button type="button" onclick="alert('recheck')">click</button>
 			</li>
 			<li>
-				<button type="submit">Submit</button><button type="reset">Reset</button>
+				<input type="submit" id="bt" name="submit" value="Save data to file" onclick="saveFile()">
+				<button type="reset">Reset</button>
 			</li>
 		</ul>
 	</form>
+	<script type="text/javascript" src="java.js"></script>
 </body>
 </html>
