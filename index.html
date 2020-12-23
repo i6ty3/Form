@@ -1,101 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test 1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test 2</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<a href="dat/index.html">Click</a>
-	<h1>Submission</h1>
-	<form action="/my-handling-form-page" method="post">
-		<ul>
-			<li>
-				<label for="name">Name:</label>
-				<input type="text" id="name" name="user_name">
-			</li>
-<!-- 			<li>
-				<label for="mail">E-mail:</label>
-				<input type="email" id="mail" name="user_email" value="abc@xyz.com">
-			</li>
-			<li>
-				<label for="message">Message:</label>
-				<textarea id="message" name="user_message">Write a message</textarea>
-			</li>
-			<li>
-				<fieldset>
-					<legend>Priority</legend>
-					<p>
-						<input type="radio" name="size" id="size1" value="Small">
-						<label for="size1">Small</label>
-					</p>
-					<p>
-						<input type="radio" name="size" id="size2" value="Medium">
-						<label for="size2">Medium</label>
-					</p>
-					<p>
-						<input type="radio" name="size" id="size3" value="Large">
-						<label for="size3">Large</label>
-					</p>
-				</fieldset>
-			</li>
-			<li>
-				<fieldset>
-					<legend>Order?</legend>
-					<p>
-					<input type="checkbox" id="orderw" name="yes" value="Yes">
-					<label for="yes">Yes</label>
-					</p>
-					<p>
-						<input type="checkbox" id="orderw" name="No" value="No">
-						<label for="no" style="text-align: left;">No</label>
-					</p>
-				</fieldset>
-			</li>
-			<li>
-				<label for="size">Size</label>
-				<select id="size" name="size">
-					<optgroup label="Big">
-						<option value="XL">Extra Large</option>
-						<option value="L">Large</option>
-					</optgroup>
-					<optgroup label="Medium">
-						<option value="ML">Medium Large</option>
-						<option value="M">Medium Short</option>
-					</optgroup>
-					<option value="small">Small</option>
-				</select>
-			</li>
-			<li>
-				<label for="word">Word</label>
-				<input list="word">
-				<datalist id="word">
-					<option value="a">
-					<option value="quick">
-					<option value="brown">
-					<option value="fox">
-					<option value="jumps">
-					<option value="over">
-					<option value="the">
-					<option value="lazy">
-					<option value="dog">
-				</datalist>
-			</li>
-			<li>
-				price <br>
-				0<input type="range"  id="a" name="a" value="50">100
-			</li>
-			<li>
-				<p id="xyz">as</p>
-			</li>
- -->			<li>
-				<button type="button" onclick="alert('recheck')">click</button>
-			</li>
-			<li>
-				<input type="submit" id="bt" name="submit" value="Save data to file" onclick="saveFile()">
-				<button type="reset">Reset</button>
-			</li>
-		</ul>
+	<header>Order</header>
+	<form action="index.html" method="post">
+		<div>
+			<label for="fname">Name:</label>
+			<input type="text" id="fname" name="Full_Name" placeholder="Full Name">
+		</div>
+		<div>
+			<label for="femail">Email:</label>
+			<input type="email" id="femail" name="Email" placeholder="abc@xyz.com">
+		</div>
+		<div>
+			<label for="fphone">Phone:</label>
+			<input type="text" id="fphone" name="Phone" placeholder="01*********">
+		</div>
+		<div>
+			<label for="fpass">Password:</label>
+			<input type="password" id="fpass" name="Password" placeholder="&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF">
+		</div>
+		<div>
+			<label>Product:</label>
+			<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+		</div>
+		<div>
+			<label>Description:</label>
+			<span id="square">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet blandit dolor, vitae congue quam. Ut accumsan nibh elit, at euismod velit condimentum vitae. Morbi nec libero turpis. Duis volutpat ante non posuere posuere. Nullam quis mauris vitae odio scelerisque blandit sed in nunc. Nulla a lacus metus. Donec mauris augue, tristique eget libero non, porta imperdiet nulla. Vestibulum eget augue eget risus ultrices vestibulum vel eu augue. Vivamus quis metus quis nulla lobortis blandit.</span>
+		</div>
+		<div>
+ 			</span><label for="fquantity">Quantity:</label>
+			0<input type="range" id="fquantity" name="NumberOfPieces" min="0" max="10" value="0" onchange="updateRangeInput(this.value); updatePrice(this.value);"> 10
+			<span id="rangeInput">0</span>
+		</div>
+		<div>
+			<label for="fprice">Price:</label>
+			<span id="fprice"></span>
+		</div>
+		<div align="right">
+			<button type="submit" onclick="saveIt();">Submit</button>
+			<button type="reset">Reset</button>
+		</div>
 	</form>
-	<script type="text/javascript" src="java.js"></script>
+	<script src="java.js"></script>
+	<script src="filesaver.js"></script>
 </body>
 </html>

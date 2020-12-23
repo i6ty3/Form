@@ -1,52 +1,46 @@
 body{
-	color: #000000;
-	background-color: #00ffff;
+	font-size: 100%;
+	background-color: #FFdddd;
 }
-h1{
-	text-align: center;
-	color: #ffff00;
+div{
+	padding: 0px 10px 10px 0px;
 }
-form{
-	margin: 0 auto;
-	width: 400px;
-	padding: 1px;
-	border: 1px solid #ffffff;
-}
-ul{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-form li + li {
-	margin-top: 10px;
+header{
+	color: blue;
+	font-size: 300%;
+	font-weight: bold;
 }
 label{
 	display: inline-block;
-	width: 70px;
-	text-align: left;
-}
-input, textarea{
-	font: 1em sans-serif;
-	width: 300px;
-	box-sizing: border-box;
-	border: 3px solid #999;
-}
-input:focus, textarea:focus{
-	border-color: #00f;
-}
-textarea{
+	width: 75px;
+	text-align: right;
 	vertical-align: top;
-	height: 200px;
 }
-.button{
-	padding-left: 90px;
+input{
+	width: 400px;
+	font-size: 100%;
+}
+input:focus{
+	border: 3px solid blue;
+	background-color: #aaffff;
 }
 button{
-	margin-left: .5em;
+	font-size: 100%;
 }
-legend{
-	color: white;
+img{
+	width: 200px;
+	height: 200px;
 }
-input#size1,#size2,#size3,#orderw{
+#rangeInput{
+	display: inline-block;
 	width: 20px;
+	margin-left: 20px;
+	text-align: center;
+	border: 2px solid black;
+}
+#square{
+	border: 3px	solid black;
+	text-align: justify;
+	width: 400px;
+	display: inline-block;
 }
