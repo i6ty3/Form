@@ -5,49 +5,66 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>test 2</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>Order</header>
-	<form action="index.html" method="post">
+	<nav class="navbar"> 
+		<div class="lish">
+			Flutter
+			<button class="about">
+				<i class="fas fa-bars"></i>
+			</button>
+		</div>
+	</nav>
+	<div class="overlay">
+		<p>HI GUYS WHAT'S UP</p>
+	</div>
+	<div class="product">
+		<h2 class="desc">
+			Name<br>
+		</h2>
+		<label class="f">Pen</label>
+		<h2 class="desc">
+			Price<br>
+		</h2>
+		<label class="f pr">10</label>
+		<h2 class="desc">
+			Image<br>
+		</h2>
+			<div class="cent">
+				<img class="small" src="https://images-na.ssl-images-amazon.com/images/I/41hjK1ALseL._SY741_.jpg" alt="image">
+	</div>
+	<form  method="POST">
 		<div>
-			<label for="fname">Name:</label>
-			<input type="text" id="fname" name="Full_Name" placeholder="Full Name">
+			<h1>Order</h1>
+			<div class="order">
+				<button type="button" class="de crease">
+					<i class="fas fa-caret-left"></i>
+				</button>&nbsp
+				<div id="count">0</div>&nbsp
+				<button type="button" class="in crease">
+					<i class="fas fa-caret-right"></i>
+				</button>
+			</div>
 		</div>
 		<div>
-			<label for="femail">Email:</label>
-			<input type="email" id="femail" name="Email" placeholder="abc@xyz.com">
+			<h1>Total</h1>
+			<div class="price">0</div>
 		</div>
+		<br><br>
 		<div>
-			<label for="fphone">Phone:</label>
-			<input type="text" id="fphone" name="Phone" placeholder="01*********">
+			<button class="submit" type="submit"><a href="./thank.html">Request</a></button>
 		</div>
+		<br><br>
 		<div>
-			<label for="fpass">Password:</label>
-			<input type="password" id="fpass" name="Password" placeholder="&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF&#x25CF">
-		</div>
-		<div>
-			<label>Product:</label>
-			<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZHVjdHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
-		</div>
-		<div>
-			<label>Description:</label>
-			<span id="square">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet blandit dolor, vitae congue quam. Ut accumsan nibh elit, at euismod velit condimentum vitae. Morbi nec libero turpis. Duis volutpat ante non posuere posuere. Nullam quis mauris vitae odio scelerisque blandit sed in nunc. Nulla a lacus metus. Donec mauris augue, tristique eget libero non, porta imperdiet nulla. Vestibulum eget augue eget risus ultrices vestibulum vel eu augue. Vivamus quis metus quis nulla lobortis blandit.</span>
-		</div>
-		<div>
- 			</span><label for="fquantity">Quantity:</label>
-			0<input type="range" id="fquantity" name="NumberOfPieces" min="0" max="10" value="0" onchange="updateRangeInput(this.value); updatePrice(this.value);"> 10
-			<span id="rangeInput">0</span>
-		</div>
-		<div>
-			<label for="fprice">Price:</label>
-			<span id="fprice"></span>
-		</div>
-		<div align="right">
-			<button type="submit" onclick="saveIt();">Submit</button>
-			<button type="reset">Reset</button>
+			<button class="exit" type="reset"><span>Reset</span></button>
 		</div>
 	</form>
-	<script src="java.js"></script>
+
+
+
+		<script src="java.js"></script>
 	<script src="filesaver.js"></script>
 </body>
 </html>

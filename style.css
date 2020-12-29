@@ -1,46 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap');
 body{
-	font-size: 100%;
-	background-color: #FFdddd;
+	background-color: black;
+	background-image: url(./wallpaper-1777483_960_720.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: cover;
+	color: #a0ffff;
+	padding: 5vh;
+	text-align: center;
 }
-div{
-	padding: 0px 10px 10px 0px;
+.navbar{
+	height: 10vh;
+	/* background-color: #111; */
 }
-header{
-	color: blue;
-	font-size: 300%;
+.lish{
+	font-family: 'Euphoria Script', cursive;;
+	font-size: 200%;
+	display: flex;
+	justify-content: space-between;
+}
+.about{
+	color: dodgerblue;
+	background-color: black;
+	margin: 5px 5px 5px 5px;
+}
+.overlay{
+	background-color: rgba(6, 97, 92, 0.719);
+	height: 100px;
+	width: 100px;
+	visibility: hidden;
+	color: white;
+	z-index: -10;
+	text-align: center;
 	font-weight: bold;
+	position: absolute;
+	right: 5vh;
 }
-label{
-	display: inline-block;
-	width: 75px;
-	text-align: right;
-	vertical-align: top;
+.show{
+	visibility: visible;
+	z-index: 10;
 }
-input{
-	width: 400px;
-	font-size: 100%;
+.desc{
+	width: 100%;
 }
-input:focus{
-	border: 3px solid blue;
-	background-color: #aaffff;
+.small{
+	max-height: 200px;
+	max-width: 200px;
+	background-color: black;
+	background-size: cover;
 }
-button{
-	font-size: 100%;
-}
-img{
+.cent{
 	width: 200px;
 	height: 200px;
-}
-#rangeInput{
-	display: inline-block;
-	width: 20px;
-	margin-left: 20px;
 	text-align: center;
-	border: 2px solid black;
+	border: 3px solid rgba(255, 221, 25, 0.911);
+	border-radius: 15px;
+	overflow: hidden;
+	display: block;
+	margin: auto;
 }
-#square{
-	border: 3px	solid black;
-	text-align: justify;
-	width: 400px;
+.f{
+	font-size: 1.5rem;
+	border: 3px solid rgba(255, 221, 25, 0.911);
+	border-radius: 10px;
 	display: inline-block;
+	width: 200px;
+	background-color: rgb(37, 37, 37);
+}
+.order{
+	display: inline-flex;
+	padding-top: 0;
+	font-size: 5rem;
+}
+.crease{
+	background-color: black;
+	color: #a0ffff;
+	border: 0;
+	font-size: 100%;
+}
+#count{
+	display: inline-block;
+	/* width: 5; */
+}
+.price{
+	border: 3px solid rgba(255, 221, 25, 0.911);
+	display: inline-block;
+	width: 200px;
+	font-size: 1.5rem;
+}
+.submit{
+	background-color: rgb(37, 37, 37);
+	color: ghostwhite;
+	height: 30px;
+	font-size:larger;
+	box-shadow: 2px 2px 3px darkgray;
+	cursor: pointer;
+}
+.submit:hover{
+	background-color: ghostwhite;
+	color:rgb(37, 37, 37);
+}
+.submit:active{
+	transform: translateX(2px);
+}
+.exit{
+	background-color: rgb(37, 37, 37);
+	color: ghostwhite;
+	height: 30px;
+	width: auto;
+	font-size:larger;
+	box-shadow: 2px 2px 3px darkgray;
+	cursor: pointer;
+}
+.exit:hover{
+	background-color: ghostwhite;
+	color:rgb(37, 37, 37);
+}
+.exit span{
+	transition: .5s;
+}
+.exit span:after{
+}
+.exit:hover span{
+	position: relative;
+	right: 0px;
+	transition: .5s;
+}
+.exit:hover span::after{
+	content: ' - Are you sure??';
+	opacity: 1;
+	position: relative;
+	left: 5px;
+	transition: .5s;
+}
+.exit:active{
+	transform: translateX(2px);
+}
+a{
+	text-decoration: none;
+	color: inherit;
 }
