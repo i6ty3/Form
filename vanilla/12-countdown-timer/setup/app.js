@@ -27,12 +27,12 @@ const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
 
-let tDate = new Date();
-const tyear = tDate.getFullYear();
-const tmonth = tDate.getMonth();
-const tday = tDate.getDate();
+// let tDate = new Date();
+// const tyear = tDate.getFullYear();
+// const tmonth = tDate.getMonth();
+// const tday = tDate.getDate();
 
-let futureDate = new Date(tyear,tmonth,tday + 1,0,0,20);
+let futureDate = new Date(2020,11,30,23,13,0);
 
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
@@ -66,7 +66,7 @@ function getRemainingTime(){
   items.forEach(function(item,index){
     item.innerHTML=values[index];
   });
-  if(t<0){
+  if(t<=0){
     clearInterval(countdown);
     deadline.innerHTML = `<h4 class="expired">sorry, expired</h4>`
   }
