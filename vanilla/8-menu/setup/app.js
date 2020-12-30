@@ -71,18 +71,40 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "Ho-Oh",
+    category: "Dinner",
+    price: 16.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 
 const sectionCenter = document.querySelector('.section-center');
-const filterBtns = document.querySelectorAll('.filter-btn');
-
+const btns = document.querySelector('.btn-container')
 
 
 window.addEventListener('DOMContentLoaded', function(){
   displayMenu(menu);
+  displayMenuButtons(menu);
+  
 });
 
-filterBtns.forEach(function(btn){
+function displayMenuButtons(menuButtons){
+const categories = menuButtons.reduce(function(bname, abc){
+    if(!bname.includes(abc.category)){
+      bname.push(abc.category);
+    }
+    return bname;
+  },['all'])
+  const categoryBtns = categories.map(function(item){
+    return `<button class="filter-btn" type="button" data-cat=${item}>${item}</button>`
+  }).join("");
+  btns.innerHTML=categoryBtns;
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  
+  filterBtns.forEach(function(btn){
   btn.addEventListener('click', function(e){
     const category = e.currentTarget.dataset.cat;
     const menuCategory = menu.filter(function(menuItem){
@@ -91,30 +113,28 @@ filterBtns.forEach(function(btn){
       }
     });
     if (category === "all"){
-      displayMenu(menu);
+      displayMenu(menuButtons);
     }else{
       displayMenu(menuCategory);
     }
   });
 });
-
-
-
+}
 
 function displayMenu(menuItems){
   let display = menuItems.map(function(xyz){
     return `<article class="menu-item">
-          <img src=${xyz.img} alt=${xyz.title} class="photo" />
-          <div class="item-info">
+    <img src=${xyz.img} alt=${xyz.title} class="photo" />
+    <div class="item-info">
             <header>
-              <h4>${xyz.title}</h4>
-              <h4 class="price">$${xyz.price}</h4>
+            <h4>${xyz.title}</h4>
+            <h4 class="price">$${xyz.price}</h4>
             </header>
             <p class="item-text">
-              ${xyz.desc}
+            ${xyz.desc}
             </p>
-          </div>
-        </article>`;
+            </div>
+            </article>`;
   });
   display = display.join('');
   sectionCenter.innerHTML=display;
