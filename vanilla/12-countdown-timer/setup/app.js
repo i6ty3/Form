@@ -27,12 +27,12 @@ const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
 
 
-// let tDate = new Date();
-// const tyear = tDate.getFullYear();
-// const tmonth = tDate.getMonth();
-// const tday = tDate.getDate();
+let tDate = new Date();
+const tyear = tDate.getFullYear();
+const tmonth = tDate.getMonth();
+const tday = tDate.getDate();
 
-let futureDate = new Date(2020,11,30,23,13,0);
+let futureDate = new Date(tyear,tmonth,tday + 0,48,0);
 
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
@@ -56,12 +56,12 @@ function getRemainingTime(){
   const oneHour = 60*60*1000;
   const oneMinute = 60*1000;
 
-  let days = Math.floor(t/ oneDay);
+  let days = Math.floor(t/oneDay);
   let hour = Math.floor((t%oneDay)/ oneHour);
   let minute = Math.floor((t%oneHour)/ oneMinute);
   let seconds = Math.floor((t%oneMinute)/1000);
 
-  const values = [days,hours,minutes,seconds];
+  const values = [days,hour,minute,seconds];
 
   items.forEach(function(item,index){
     item.innerHTML=values[index];
