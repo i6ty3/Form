@@ -99,7 +99,7 @@ ul{
     padding-top: 1.5vw;
     display: none;
     transition: all .4s linear;
-    font-size:small;
+    font-size: 1.5rem;
 }
 .main-show{
     display: block;
@@ -114,17 +114,17 @@ ul{
     background-color: white;
 }
 .n{
-    padding-top: .5vw;
+    padding-top: 1rem;
 }
 label{
     display: inline-block;
-    width: 15vw;
+    width: 10rem;
     vertical-align: top;
 }
 .final{
-    height: 2.3vw;
-    width: 50vw;
-    font-size: 2vw;
+    height: 2rem;
+    width: 30rem;
+    font-size: 1.5rem;
 }
 @media only screen and (max-width: 1000px){
     .visit{
@@ -138,6 +138,7 @@ label{
     .main{
         padding-left: 1.5vw;
         transition: all .5s linear;
+        font-size: 1rem;
     }
     .logo{
         display: none;
@@ -145,4 +146,16 @@ label{
     .menu{
         display: none;
     }
+    .n{
+        padding-top: .2rem;
+    }
+    label{
+        display: block;
+    }
+    .final{
+        height: 2rem;
+        width: 95vw;
+        font-size: 1rem;
+    }
+
 }
