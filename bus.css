@@ -99,7 +99,7 @@ ul{
     padding-top: 1.5vw;
     display: none;
     transition: all .4s linear;
-    font-size: 1vw;
+    font-size:small;
 }
 .main-show{
     display: block;
