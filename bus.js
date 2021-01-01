@@ -1,3 +1,5 @@
+// navheader content buttons
+
 const btns = document.querySelectorAll('.btn');
 const content = document.querySelectorAll('.main');
 const navHead = document.querySelector('.nav-header');
@@ -17,3 +19,24 @@ navHead.addEventListener('click',function(e){
     }
 });
 
+// menu sidebar button
+const menuButton = document.querySelector('.menu');
+const sideBar = document.querySelector('.sidebar');
+
+
+menuButton.addEventListener('click', function(){
+    sideBar.classList.toggle('show-sidebar');
+    content.forEach(function(article){
+        article.classList.toggle('pad');
+    });
+});
+
+//cross sidebar button
+const cross = document.querySelector('.cross');
+
+cross.addEventListener('click', function(){
+    sideBar.classList.remove('show-sidebar');
+    content.forEach(function(article){
+        article.classList.remove('pad');
+    });
+});
