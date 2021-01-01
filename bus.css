@@ -99,7 +99,7 @@ ul{
     padding-top: 1.5vw;
     display: none;
     transition: all .4s linear;
-    font-size: 3vh;
+    font-size: 2vw;
 }
 .main-show{
     display: block;
@@ -118,7 +118,7 @@ ul{
 }
 label{
     display: inline-block;
-    width: 25vw;
+    width: 15vw;
     vertical-align: top;
 }
 .final{
