@@ -1,70 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>test 2</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-	<link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
-</head>
-<body>
-	<nav class="navbar"> 
-		<div class="lish">
-			Flutter
-			<button class="about">
-				<i class="fas fa-bars"></i>
-			</button>
-		</div>
-	</nav>
-	<div class="overlay">
-		<p>HI GUYS WHAT'S UP</p>
-	</div>
-	<div class="product">
-		<h2 class="desc">
-			Name<br>
-		</h2>
-		<label class="f">Pen</label>
-		<h2 class="desc">
-			Price<br>
-		</h2>
-		<label class="f pr">10</label>
-		<h2 class="desc">
-			Image<br>
-		</h2>
-			<div class="cent">
-				<img class="small" src="https://images-na.ssl-images-amazon.com/images/I/41hjK1ALseL._SY741_.jpg" alt="image">
-	</div>
-	<form  method="POST">
-		<div>
-			<h1>Order</h1>
-			<div class="order">
-				<button type="button" class="de crease">
-					<i class="fas fa-caret-left"></i>
-				</button>&nbsp
-				<div id="count">0</div>&nbsp
-				<button type="button" class="in crease">
-					<i class="fas fa-caret-right"></i>
-				</button>
-			</div>
-		</div>
-		<div>
-			<h1>Total</h1>
-			<div class="price">0</div>
-		</div>
-		<br><br>
-		<div>
-			<button class="submit" type="submit"><a href="./thank.html">Request</a></button>
-		</div>
-		<br><br>
-		<div>
-			<button class="exit" type="reset"><span>Reset</span></button>
-		</div>
-	</form>
-
-
-
-		<script src="java.js"></script>
-	<script src="filesaver.js"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q & A</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- extra fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="index.css"/>
+  </head>
+  <body>
+      <section class="questions">
+        <!-- title -->
+        <div class="title">
+          <h2>Shop Name Xyz</h2>
+        </div>
+        <!-- questions -->
+        <div class="section-center">
+          <!-- single question -->
+          <article class="question">
+            <!-- question title -->
+            <button type="button" class="add">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <div class="question-title">
+              <p class="drop">Beef Cheese Burger</p>
+              <button type="button" class="question-btn">
+                <span class="plus-icon">
+                  <i class="fas fa-angle-down"></i>&nbsp&nbsp
+                </span>
+                <span class="minus-icon">
+                  <i class="fas fa-angle-up"></i>&nbsp&nbsp
+                </span>
+              </button>
+            </div>
+            <!-- question text -->
+            <div class="question-text">
+              <p>
+                Desccription 123
+              </p>
+            </div>
+          </article>
+          <!-- end of single question -->
+      </section>
+    </main>
+    <!-- javascript -->
+    <script src="index.js"></script>
+  </body>
 </html>
