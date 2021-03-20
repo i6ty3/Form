@@ -82,11 +82,50 @@ const menu = [
 ];
 
 const sectionCenter = document.querySelector(".section-center");
+const btnContainer = document.querySelector(".btn-container");
 // display all items when page loads
 window.addEventListener("DOMContentLoaded", function () {
   diplayMenuItems(menu);
+  displayMenuButtons();
+  
+});
 
-  ///////////////////////////part1
+function diplayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    // console.log(item);
+    
+    return `<article class="question">
+    <button type="button" class="add">
+    <i class="fas fa-cart-plus"></i>
+    </button>
+    <div class="question-title drop">
+    <p class="">${item.title}</p>
+    <button type="button" class="question-btn">
+    <span class="plus-icon">
+    <i class="fas fa-angle-down"></i>&nbsp&nbsp
+    </span>
+    <span class="minus-icon">
+    <i class="fas fa-angle-up"></i>&nbsp&nbsp
+    </span>
+    </button>
+    </div>
+    <div class="question-text">
+    <p>
+    Price: $${item.price}
+    </p>
+    <br>
+    <p>
+    Description: ${item.desc}
+    </p>
+    </div>
+    </article>`;
+  });
+  displayMenu = displayMenu.join("");
+  // console.log(displayMenu);
+  
+  sectionCenter.innerHTML = displayMenu;
+
+  /////////////////////////////////////////////////////////////////////////////////////part1
   //using selectors inside the element
   const questions = document.querySelectorAll(".question");
   
@@ -94,7 +133,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const btns = question.querySelectorAll(".drop");
     // console.log(btn);
   btns.forEach(function(btn){
-
+  
     btn.addEventListener("click", function () {
       // console.log(question);
   
@@ -108,41 +147,45 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   });
   });
-////////////////////////part 2
-});
+  /////////////////////////////////////////////////////////////////////////////part 2
+}
+function displayMenuButtons() {
+  const categories = menu.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  const categoryBtns = categories
+    .map(function (category) {
+      return `<button type="button" class="filter-btn" data-id=${category}>
+          ${category}
+        </button>`;
+    })
+    .join("");
 
-function diplayMenuItems(menuItems) {
-  let displayMenu = menuItems.map(function (item) {
-    // console.log(item);
+  btnContainer.innerHTML = categoryBtns;
+  const filterBtns = btnContainer.querySelectorAll(".filter-btn");
+  console.log(filterBtns);
 
-    return `<article class="question">
-    <button type="button" class="add">
-      <i class="fas fa-cart-plus"></i>
-    </button>
-    <div class="question-title drop">
-      <p class="">${item.title}</p>
-      <button type="button" class="question-btn">
-         <span class="plus-icon">
-           <i class="fas fa-angle-down"></i>&nbsp&nbsp
-         </span>
-         <span class="minus-icon">
-           <i class="fas fa-angle-up"></i>&nbsp&nbsp
-          </span>
-        </button>
-    </div>
-    <div class="question-text">
-      <p>
-        Price: $${item.price}
-      </p>
-      <br>
-      <p>
-        Description: ${item.desc}
-      </p>
-    </div>
-  </article>`;
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      // console.log(e.currentTarget.dataset);
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter(function (menuItem) {
+        // console.log(menuItem.category);
+        if (menuItem.category === category) {
+          return menuItem;
+        }
+      });
+      if (category === "all") {
+        diplayMenuItems(menu);
+      } else {
+        diplayMenuItems(menuCategory);
+      }
+    });
   });
-  displayMenu = displayMenu.join("");
-  // console.log(displayMenu);
-
-  sectionCenter.innerHTML = displayMenu;
 }
